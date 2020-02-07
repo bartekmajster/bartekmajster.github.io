@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 4em;
+        }
+
+        ul li {
+            margin: 10px;
+            transition: .3s;
+        }
+
+        ul li:hover {
+            cursor: pointer;
+            border-bottom: 3px solid darkred;
+            margin-bottom: -3px;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js"></script>
+<section>
+    <img src="./img/me.jpg" alt="me">
+    <about-me></about-me>
+</section>
+
+<section>
+    <ul>
+        <li onclick="controls.game()">🕹</li>
+        <li><a href="./blog/index.html">📝</a></li>
+        <li onclick="controls.getJoke()">😂</li>
+    </ul>
+</section>
+<aside>
+    <gh-repos></gh-repos>
+    <template id="gh-logo">
+        <style>
+            .svg-inline--fa {
+                display: inline-block;
+                font-size: inherit;
+                height: 1em;
+                overflow: visible;
+                vertical-align: -.125em;
+            }
+
+            .svg-inline--fa.fa-w-16 {
+                width: 1em;
+            }
+        </style>
+        My <i class="fab fa-github"></i> repos
+    </template>
+</aside>
+<script type="text/javascript" src="index_bundle.js"></script><script type="text/javascript" src="2.index_bundle.js"></script><script type="text/javascript" src="0.index_bundle.js"></script></body>
+</html>

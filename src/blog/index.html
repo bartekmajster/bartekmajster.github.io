@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/markdown-element/dist/markdown-element.min.js"></script>
+<blog-header></blog-header>
+<blog-nav></blog-nav>
+<blog-body>
+    <div slot="side-menu">
+        <img src="../img/me.jpg" alt="me" style="width: 100px; height: 100px">
+        <about-me></about-me>
+    </div>
+</blog-body>
+<blog-footer></blog-footer>
+<template id="blog-loading">
+    <style>
+        .fa-pulse{
+            -webkit-transform: fa-spin 1s infinite steps(8);
+            animation: fa-spin 1s infinite steps(8);
+        }
+        @-webkit-keyframes fa-spin {
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fa-spin {
+            0%{
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        svg:not(:root).svg-inline--fa{
+            overflow: visible;
+        }
+        .svg-inline--fa {
+            display: inline-block;
+            font-size: inherit;
+            height: 1em;
+            overflow: visible;
+            vertical-align: -.125em;
+        }
+
+        .svg-inline--fa.fa-w-16 {
+            width: 1em;
+        }
+    </style>
+    <i class="fas fa-spinner"></i>
+</template>
+</body>
+</html>
